@@ -54,11 +54,6 @@ export LDFLAGS="%{__global_ldflags}"
 # Setting correct chmod...
 chmod 755 %{buildroot}%{_libdir}/purple-2/lib%{plugin_name}.so
 
-# Installing icons...
-install -p hangouts16.png %{buildroot}%{_datadir}/pixmaps/pidgin/protocols/16/%{plugin_name}.png
-install -p hangouts22.png %{buildroot}%{_datadir}/pixmaps/pidgin/protocols/22/%{plugin_name}.png
-install -p hangouts48.png %{buildroot}%{_datadir}/pixmaps/pidgin/protocols/48/%{plugin_name}.png
-
 %files
 %{_libdir}/purple-2/lib%{plugin_name}.so
 %license gpl3.txt
