@@ -10,7 +10,7 @@ Version: 1.0
 Release: 29.%{date}hg%{shortcommit0}%{?dist}
 Summary: Hangouts plugin for libpurple
 
-License: GPLv3
+License: GPLv3+
 URL: https://bitbucket.org/EionRobb/purple-hangouts/
 Source0: https://bitbucket.org/EionRobb/purple-hangouts/get/%{commit0}.tar.gz#/purple-hangouts-%{shortcommit0}.tar.gz
 
