@@ -7,7 +7,7 @@
 
 Name: purple-%{plugin_name}
 Version: 0
-Release: 31.%{date}hg%{shortcommit0}%{?dist}
+Release: 32.%{date}hg%{shortcommit0}%{?dist}
 Epoch: 1
 Summary: Hangouts plugin for libpurple
 
@@ -25,7 +25,7 @@ BuildRequires: gcc
 %package -n pidgin-%{plugin_name}
 Summary: Adds pixmaps, icons and smileys for Hangouts protocol
 BuildArch: noarch
-Requires: %{name} = %{version}-%{release}
+Requires: %{name} = %{?epoch:%{epoch}:}%{version}-%{release}
 Requires: pidgin
 
 %description
@@ -40,7 +40,7 @@ hangouts-purple.
 %autosetup -n EionRobb-purple-%{plugin_name}-%{archcommit0}
 
 # fix W: wrong-file-end-of-line-encoding
-perl -i -pe 's/\r\n/\n/gs' README.md
+sed -i -e "s,\r,," README.md
 
 %build
 export CFLAGS="%{optflags}"
@@ -63,6 +63,9 @@ chmod 755 %{buildroot}%{_libdir}/purple-2/lib%{plugin_name}.so
 %{_datadir}/pixmaps/pidgin/protocols/*/%{plugin_name}.png
 
 %changelog
+* Sun Jul 10 2016 Vitaly Zaitsev <vitaly@easycoding.org> - 1:0-32.20160710hg5378549
+- Fixed Requires for pidgin subpackage. Replaced Perl to sed in prep section.
+
 * Sun Jul 10 2016 Vitaly Zaitsev <vitaly@easycoding.org> - 1:0-31.20160710hg5378549
 - Fixed version. Updated SPEC file.
 
