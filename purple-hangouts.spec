@@ -1,13 +1,13 @@
 %global plugin_name hangouts
 
-%global commit0 2c60a5eaaec1fa602caea9946725fd81e4e89dbf
+%global commit0 d6eb7fe69b1b3fd909b41c6b33566fc498c834b2
 %global shortcommit0 %(c=%{commit0}; echo ${c:0:7})
 %global archcommit0 %(c=%{commit0}; echo ${c:0:12})
-%global date 20160712
+%global date 20160714
 
 Name: purple-%{plugin_name}
 Version: 0
-Release: 33.%{date}hg%{shortcommit0}%{?dist}
+Release: 34.%{date}hg%{shortcommit0}%{?dist}
 Epoch: 1
 Summary: Hangouts plugin for libpurple
 
@@ -63,6 +63,9 @@ chmod 755 %{buildroot}%{_libdir}/purple-2/lib%{plugin_name}.so
 %{_datadir}/pixmaps/pidgin/protocols/*/%{plugin_name}.png
 
 %changelog
+* Tue Jul 19 2016 Vitaly Zaitsev <vitaly@easycoding.org> - 1:0-34.20160714hgd6eb7fe
+- Updated to latest snapshot.
+
 * Tue Jul 12 2016 Vitaly Zaitsev <vitaly@easycoding.org> - 1:0-33.20160712hg2c60a5e
 - Updated to latest snapshot.
 
@@ -76,7 +79,7 @@ chmod 755 %{buildroot}%{_libdir}/purple-2/lib%{plugin_name}.so
 - Updated to latest snapshot. Updated install section due upstream changes.
 
 * Tue Jun 21 2016 Vitaly Zaitsev <vitaly@easycoding.org> - 0-29.20160621hg38f0731
-- Added missing LDFLAGS to %build.
+- Added missing LDFLAGS to build.
 
 * Tue Jun 21 2016 Vitaly Zaitsev <vitaly@easycoding.org> - 0-28.20160621hg38f0731
 - Updated to latest Git snapshot.
