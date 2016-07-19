@@ -13,7 +13,7 @@ Summary: Hangouts plugin for libpurple
 
 License: GPLv3+
 URL: https://bitbucket.org/EionRobb/purple-hangouts/
-Source0: https://bitbucket.org/EionRobb/purple-hangouts/get/%{commit0}.tar.gz#/purple-hangouts-%{shortcommit0}.tar.gz
+Source0: https://bitbucket.org/EionRobb/purple-hangouts/get/%{commit0}.tar.gz#/%{name}-%{shortcommit0}.tar.gz
 
 BuildRequires: pkgconfig(libprotobuf-c)
 BuildRequires: pkgconfig(json-glib-1.0)
