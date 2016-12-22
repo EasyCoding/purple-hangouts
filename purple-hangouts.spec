@@ -3,7 +3,7 @@
 %global commit0 7c0a620ffe730a645066575d41a5a8be8ef7880e
 %global shortcommit0 %(c=%{commit0}; echo ${c:0:7})
 %global archcommit0 %(c=%{commit0}; echo ${c:0:12})
-%global date 20161128
+%global date 20161222
 
 Name: purple-%{plugin_name}
 Version: 0
@@ -63,7 +63,7 @@ chmod 755 %{buildroot}%{_libdir}/purple-2/lib%{plugin_name}.so
 %{_datadir}/pixmaps/pidgin/protocols/*/%{plugin_name}.png
 
 %changelog
-* Thu Dec 22 2016 Vitaly Zaitsev <vitaly@easycoding.org> - 1:0-42.20161128hg7c0a620
+* Thu Dec 22 2016 Vitaly Zaitsev <vitaly@easycoding.org> - 1:0-42.20161222hg7c0a620
 - Updated to latest snapshot.
 
 * Sun Dec 04 2016 Vitaly Zaitsev <vitaly@easycoding.org> - 1:0-41.20161128hg4c2de0f
