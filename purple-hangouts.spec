@@ -1,13 +1,13 @@
 %global plugin_name hangouts
 
-%global commit0 7c0a620ffe730a645066575d41a5a8be8ef7880e
+%global commit0 a755fcc34151e76dbe5de650113dc44cf797a5cd
 %global shortcommit0 %(c=%{commit0}; echo ${c:0:7})
 %global archcommit0 %(c=%{commit0}; echo ${c:0:12})
-%global date 20161222
+%global date 20170308
 
 Name: purple-%{plugin_name}
 Version: 0
-Release: 42.%{date}hg%{shortcommit0}%{?dist}
+Release: 44.%{date}hg%{shortcommit0}%{?dist}
 Epoch: 1
 Summary: Hangouts plugin for libpurple
 
@@ -63,6 +63,12 @@ chmod 755 %{buildroot}%{_libdir}/purple-2/lib%{plugin_name}.so
 %{_datadir}/pixmaps/pidgin/protocols/*/%{plugin_name}.png
 
 %changelog
+* Sat Mar 11 2017 Vitaly Zaitsev <vitaly@easycoding.org> - 1:0-44.20170308hga755fcc
+- Updated to latest snapshot.
+
+* Sat Feb 11 2017 Fedora Release Engineering <releng@fedoraproject.org> - 1:0-43.20161222hg7c0a620
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_26_Mass_Rebuild
+
 * Thu Dec 22 2016 Vitaly Zaitsev <vitaly@easycoding.org> - 1:0-42.20161222hg7c0a620
 - Updated to latest snapshot.
 
