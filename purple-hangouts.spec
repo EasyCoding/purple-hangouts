@@ -22,6 +22,10 @@ BuildRequires: pkgconfig(purple)
 BuildRequires: pkgconfig(zlib)
 BuildRequires: gcc
 
+%if 0%{?rhel}
+ExcludeArch: ppc64
+%endif
+
 %package -n pidgin-%{plugin_name}
 Summary: Adds pixmaps, icons and smileys for Hangouts protocol
 BuildArch: noarch
