@@ -7,7 +7,7 @@
 
 Name: purple-%{plugin_name}
 Version: 0
-Release: 51.%{date}hg%{shortcommit0}%{?dist}
+Release: 52.%{date}hg%{shortcommit0}%{?dist}
 Epoch: 1
 Summary: Hangouts plugin for libpurple
 
@@ -67,6 +67,9 @@ chmod 755 %{buildroot}%{_libdir}/purple-2/lib%{plugin_name}.so
 %{_datadir}/pixmaps/pidgin/protocols/*/%{plugin_name}.png
 
 %changelog
+* Wed Nov 08 2017 Vitaly Zaitsev <vitaly@easycoding.org> - 1:0-52.20171023hg4ce9b33
+- Fixed build under EPEL7.
+
 * Wed Nov 08 2017 Vitaly Zaitsev <vitaly@easycoding.org> - 1:0-51.20171023hg4ce9b33
 - Updated to latest snapshot.
 
