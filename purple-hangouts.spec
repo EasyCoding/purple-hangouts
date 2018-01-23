@@ -48,7 +48,7 @@ sed -i -e "s,\r,," README.md
 
 %build
 export CFLAGS="%{optflags}"
-export LDFLAGS="%{__global_ldflags} -ldl"
+export LDFLAGS="%{__global_ldflags} -ldl -lz"
 %make_build
 
 %install
