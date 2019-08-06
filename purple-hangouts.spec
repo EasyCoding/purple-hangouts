@@ -22,7 +22,7 @@ BuildRequires: pkgconfig(purple)
 BuildRequires: pkgconfig(zlib)
 BuildRequires: gcc
 
-%if 0%{?rhel}
+%if 0%{?rhel} && 0%{?rhel} == 7
 ExcludeArch: ppc64
 %endif
 
