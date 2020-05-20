@@ -1,18 +1,18 @@
 %global plugin_name hangouts
 
-%global commit0 3f7d89bf9ce2bf596aca4b8340c8623fe282f6b1
+%global commit0 789eaca9d1a6b08ecf277611361dad8d4548f8f2
 %global shortcommit0 %(c=%{commit0}; echo ${c:0:7})
 %global archcommit0 %(c=%{commit0}; echo ${c:0:12})
-%global date 20190607
+%global date 20200423
 
 Name: purple-%{plugin_name}
 Version: 0
-Release: 66.%{date}hg%{shortcommit0}%{?dist}
+Release: 67.%{date}hg%{shortcommit0}%{?dist}
 Epoch: 1
 Summary: Hangouts plugin for libpurple
 
 License: GPLv3+
-URL: https://bitbucket.org/EionRobb/purple-hangouts
+URL: https://bitbucket.org/EionRobb/%{name}
 Source0: %{url}/get/%{commit0}.tar.gz#/%{name}-%{shortcommit0}.tar.gz
 
 BuildRequires: pkgconfig(libprotobuf-c)
@@ -66,6 +66,9 @@ chmod 755 %{buildroot}%{_libdir}/purple-2/lib%{plugin_name}.so
 %{_datadir}/pixmaps/pidgin/protocols/*/%{plugin_name}.png
 
 %changelog
+* Wed May 20 2020 Vitaly Zaitsev <vitaly@easycoding.org> - 1:0-67.20200423hg789eaca
+- Updated to latest snapshot.
+
 * Thu Jan 30 2020 Fedora Release Engineering <releng@fedoraproject.org> - 1:0-66.20190607hg3f7d89b
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_32_Mass_Rebuild
 
