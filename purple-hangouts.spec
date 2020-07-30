@@ -7,7 +7,7 @@
 
 Name: purple-%{plugin_name}
 Version: 0
-Release: 67.%{date}hg%{shortcommit0}%{?dist}
+Release: 69.%{date}hg%{shortcommit0}%{?dist}
 Epoch: 1
 Summary: Hangouts plugin for libpurple
 
@@ -66,6 +66,12 @@ chmod 755 %{buildroot}%{_libdir}/purple-2/lib%{plugin_name}.so
 %{_datadir}/pixmaps/pidgin/protocols/*/%{plugin_name}.png
 
 %changelog
+* Tue Jul 28 2020 Fedora Release Engineering <releng@fedoraproject.org> - 1:0-69.20200423hg789eaca
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_33_Mass_Rebuild
+
+* Sun Jun 14 2020 Adrian Reber <adrian@lisas.de> - 1:0-68.20200423hg789eaca
+- Rebuilt for protobuf 3.12
+
 * Wed May 20 2020 Vitaly Zaitsev <vitaly@easycoding.org> - 1:0-67.20200423hg789eaca
 - Updated to latest snapshot.
 
