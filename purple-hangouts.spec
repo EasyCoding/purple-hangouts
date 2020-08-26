@@ -1,19 +1,18 @@
 %global plugin_name hangouts
 
-%global commit0 789eaca9d1a6b08ecf277611361dad8d4548f8f2
+%global commit0 efa7a53e2db4087a1590850423aa16b380bfbbd5
 %global shortcommit0 %(c=%{commit0}; echo ${c:0:7})
-%global archcommit0 %(c=%{commit0}; echo ${c:0:12})
-%global date 20200423
+%global date 20200710
 
 Name: purple-%{plugin_name}
 Version: 0
-Release: 69.%{date}hg%{shortcommit0}%{?dist}
+Release: 70.%{date}git%{shortcommit0}%{?dist}
 Epoch: 1
 Summary: Hangouts plugin for libpurple
 
 License: GPLv3+
-URL: https://bitbucket.org/EionRobb/%{name}
-Source0: %{url}/get/%{commit0}.tar.gz#/%{name}-%{shortcommit0}.tar.gz
+URL: https://github.com/EionRobb/%{name}
+Source0: %{url}/archive/%{commit0}/%{name}-%{shortcommit0}.tar.gz
 
 BuildRequires: pkgconfig(libprotobuf-c)
 BuildRequires: pkgconfig(json-glib-1.0)
@@ -41,7 +40,7 @@ Adds pixmaps, icons and smileys for Hangouts protocol implemented by
 hangouts-purple.
 
 %prep
-%autosetup -n EionRobb-purple-%{plugin_name}-%{archcommit0}
+%autosetup -n %{name}-%{commit0}
 
 # fix W: wrong-file-end-of-line-encoding
 sed -i -e "s,\r,," README.md
@@ -66,6 +65,10 @@ chmod 755 %{buildroot}%{_libdir}/purple-2/lib%{plugin_name}.so
 %{_datadir}/pixmaps/pidgin/protocols/*/%{plugin_name}.png
 
 %changelog
+* Wed Aug 26 2020 Vitaly Zaitsev <vitaly@easycoding.org> - 1:0-70.20200710gitefa7a53
+- Switched upstream URL from BitBucket to GitHub.
+- Updated to latest snapshot.
+
 * Tue Jul 28 2020 Fedora Release Engineering <releng@fedoraproject.org> - 1:0-69.20200423hg789eaca
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_33_Mass_Rebuild
 
