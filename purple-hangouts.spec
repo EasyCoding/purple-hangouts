@@ -6,7 +6,7 @@
 
 Name: purple-%{plugin_name}
 Version: 0
-Release: 70.%{date}git%{shortcommit0}%{?dist}
+Release: 71.%{date}git%{shortcommit0}%{?dist}
 Epoch: 1
 Summary: Hangouts plugin for libpurple
 
@@ -65,6 +65,9 @@ chmod 755 %{buildroot}%{_libdir}/purple-2/lib%{plugin_name}.so
 %{_datadir}/pixmaps/pidgin/protocols/*/%{plugin_name}.png
 
 %changelog
+* Thu Sep 24 2020 Adrian Reber <adrian@lisas.de> - 1:0-71.20200710gitefa7a53
+- Rebuilt for protobuf 3.13
+
 * Wed Aug 26 2020 Vitaly Zaitsev <vitaly@easycoding.org> - 1:0-70.20200710gitefa7a53
 - Switched upstream URL from BitBucket to GitHub.
 - Updated to latest snapshot.
