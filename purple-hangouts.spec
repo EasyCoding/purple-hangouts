@@ -20,6 +20,7 @@ BuildRequires: pkgconfig(glib-2.0)
 BuildRequires: pkgconfig(purple)
 BuildRequires: pkgconfig(zlib)
 BuildRequires: gcc
+BuildRequires: make
 
 %if 0%{?rhel} && 0%{?rhel} == 7
 ExcludeArch: ppc64
